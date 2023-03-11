@@ -1,0 +1,28 @@
+@[Include("hidapi/hidapi.h")]
+
+@[Link("hidapi-hidraw")]
+lib LibHIDAPI
+
+  fun hid_init
+  fun hid_exit
+  fun hid_enumerate
+  fun hid_free_enumeration
+  fun hid_open
+  fun hid_open_path
+  fun hid_write
+  fun hid_read_timeout
+  fun hid_read
+  fun hid_set_nonblocking
+  fun hid_send_feature_report
+  fun hid_get_feature_report
+  fun hid_get_input_report
+  fun hid_close
+  fun hid_get_manufacturer_string
+  fun hid_get_product_string
+  fun hid_get_serial_number_string
+  fun hid_get_device_info
+  fun hid_get_indexed_string
+  fun hid_error
+  fun hid_version
+  fun hid_version_str
+end

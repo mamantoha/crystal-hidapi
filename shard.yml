@@ -1,0 +1,13 @@
+name: crystal-hidapi
+version: 0.1.0
+
+authors:
+  - Anton Maminov <anton.maminov@gmail.com>
+
+crystal: 1.7.3
+
+development_dependencies:
+  crystal_lib:
+    github: crystal-lang/crystal_lib
+
+license: MIT

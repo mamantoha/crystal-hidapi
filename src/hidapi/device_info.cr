@@ -25,7 +25,7 @@ struct HIDAPI::DeviceInfo
     @product_id = info.product_id.to_i
     @serial_number = String.new(info.serial_number)
     @release_number = info.release_number.to_i
-    @manufacturer_string = String.new(info.manufacturer_string)
+    @manufacturer_string = info.manufacturer_string.null? ? "" : String.new(info.manufacturer_string)
     @product_string = String.new(info.product_string)
     @usage_page = info.usage_page.to_i
     @usage = info.usage.to_i

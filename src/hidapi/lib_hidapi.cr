@@ -2,6 +2,7 @@
 lib LibHIDAPI
   fun hid_init : LibC::Int
   fun hid_exit : LibC::Int
+
   struct HidDeviceInfo
     path : LibC::Char*
     vendor_id : LibC::UShort
@@ -16,13 +17,14 @@ lib LibHIDAPI
     next : HidDeviceInfo*
     bus_type : HidBusType
   end
-  alias WcharT = LibC::Int
+
+  alias WcharT = UInt32
   enum HidBusType
-    HidApiBusUnknown = 0
-    HidApiBusUsb = 1
+    HidApiBusUnknown   = 0
+    HidApiBusUsb       = 1
     HidApiBusBluetooth = 2
-    HidApiBusI2C = 3
-    HidApiBusSpi = 4
+    HidApiBusI2C       = 3
+    HidApiBusSpi       = 4
   end
   fun hid_enumerate(vendor_id : LibC::UShort, product_id : LibC::UShort) : HidDeviceInfo*
   fun hid_free_enumeration(devs : HidDeviceInfo*)
@@ -43,11 +45,13 @@ lib LibHIDAPI
   fun hid_get_device_info(dev : HidDevice) : HidDeviceInfo*
   fun hid_get_indexed_string(dev : HidDevice, string_index : LibC::Int, string : WcharT*, maxlen : LibC::SizeT) : LibC::Int
   fun hid_error(dev : HidDevice) : WcharT*
+
   struct HidApiVersion
     major : LibC::Int
     minor : LibC::Int
     patch : LibC::Int
   end
+
   fun hid_version : HidApiVersion*
   fun hid_version_str : LibC::Char*
 end

@@ -10,6 +10,8 @@ puts String.new(LibHIDAPI.hid_version_str)
 while cur_dev
   info = cur_dev.value # LibHIDAPI::HidDeviceInfo
   p! info
+  p! "0x%.4X" % info.vendor_id
+  p! "0x%.4X" % info.product_id
 
   handle = LibHIDAPI.hid_open(info.vendor_id, info.product_id, info.serial_number)
   # handle = LibHIDAPI.hid_open_path(info.path)

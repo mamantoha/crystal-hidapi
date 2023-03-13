@@ -28,6 +28,7 @@ you need to install the development package for `hidapi`
 
 - macOS: `brew install hidapi`
 - Arch Linux: `pacman -S hidapi`
+- Ubuntu: `apt install libhidapi-dev`
 
 ## Usage
 

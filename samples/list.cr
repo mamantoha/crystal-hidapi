@@ -1,7 +1,5 @@
 require "../src/hidapi/lib_hidapi"
 
-MAX_STR = 255
-
 devs = LibHIDAPI.hid_enumerate(0x0, 0x0)
 cur_dev = devs
 
@@ -17,15 +15,7 @@ while cur_dev
   # handle = LibHIDAPI.hid_open_path(info.path)
   p! handle
 
-  serial_number = info.serial_number.value
-  # p! serial_number
-
-  # FIXME Invalid memory access (signal 11) at address 0x10
-  # LibHIDAPI.hid_get_device_info(handle)
-  # LibHIDAPI.hid_get_manufacturer_string(handle, out str, MAX_STR)
-
   LibHIDAPI.hid_close(handle)
-
 
   cur_dev = info.next
 

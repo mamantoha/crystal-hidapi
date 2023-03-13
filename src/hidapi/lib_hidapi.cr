@@ -1,4 +1,8 @@
-@[Link("hidapi-hidraw")]
+{% if flag?(:linux) %}
+  @[Link("hidapi-hidraw")]
+{% else %}
+  @[Link("hidapi")]
+{% end %}
 lib LibHIDAPI
   fun hid_init : LibC::Int
   fun hid_exit : LibC::Int

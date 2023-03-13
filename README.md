@@ -22,6 +22,13 @@ crystal ./lib/crystal_lib/src/main.cr src/hidapi/lib_hidapi.cr.in > src/hidapi/l
 
 2. Run `shards install`
 
+### Compile time dependencies
+
+you need to install the development package for `hidapi`
+
+- macOS: `brew install hidapi`
+- Arch Linux: `pacman -S hidapi`
+
 ## Usage
 
 ```crystal

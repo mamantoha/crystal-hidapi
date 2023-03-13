@@ -18,6 +18,10 @@ class HIDAPI
       cur_dev = info.next
     end
   end
+
+  def version : String
+    String.new(LibHIDAPI.hid_version_str)
+  end
 end
 
 require "./hidapi/*"

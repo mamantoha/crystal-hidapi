@@ -3,17 +3,17 @@ require "./ext"
 class HIDAPI
   VERSION = "0.1.0"
 
-  getter devices : Array(Device)
+  getter devices : Array(DeviceInfo)
 
   def initialize
     devs = LibHIDAPI.hid_enumerate(0x0, 0x0)
     cur_dev = devs
-    @devices = [] of Device
+    @devices = [] of DeviceInfo
 
     while cur_dev
       info = cur_dev.value
 
-      @devices << Device.new(info)
+      @devices << DeviceInfo.new(info)
 
       cur_dev = info.next
     end

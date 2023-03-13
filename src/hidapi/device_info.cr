@@ -1,4 +1,4 @@
-struct HIDAPI::Device
+struct HIDAPI::DeviceInfo
   getter path : String
   getter vendor_id : Int32
   getter product_id : Int32

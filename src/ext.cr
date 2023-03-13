@@ -1,4 +1,8 @@
 lib LibC
+  # Returns the length of a wide string,
+  # that is the number of non-null wide characters that precede the terminating null wide character.
+  #
+  # `size_t wcslen( const wchar_t *str );`
   fun wcslen(s : UInt32*) : SizeT
 end
 

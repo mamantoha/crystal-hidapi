@@ -4,6 +4,7 @@ TODO: Write a description here
 
 https://github.com/libusb/hidapi
 https://github.com/libusb/hidapi/blob/master/hidapi/hidapi.h
+https://github.com/libusb/hidapi/blob/master/hidtest/test.c
 https://github.com/todbot/hidapitester/blob/master/hidapitester.c
 
 ```

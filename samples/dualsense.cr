@@ -44,12 +44,12 @@ while cur_dev
   when 0x2
     battery_capacity = 100
     battery_status = "full"
-  when 0xa # voltage or temperature out of range
   when 0xb # temperature error
     battery_capacity = 0
     battery_status = "not-charging"
-  when 0xf # charging error
   else
+    # when 0xa # voltage or temperature out of range
+    # when 0xf # charging error
     battery_capacity = 0
     battery_status = "unknown"
   end

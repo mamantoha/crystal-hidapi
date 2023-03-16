@@ -1,6 +1,7 @@
 require "../src/hidapi/lib_hidapi"
 
 # Get the Sony PlayStation 5 DualSense controller battery level
+# Tested on Linux
 
 # https://github.com/torvalds/linux/blob/master/drivers/hid/hid-playstation.c
 # https://github.com/nowrep/dualsensectl
@@ -21,7 +22,11 @@ cur_dev = devs
 while cur_dev
   info = cur_dev.value
 
-  next unless info.vendor_id == DS_VENDOR_ID && info.product_id == DS_PRODUCT_ID
+  if info.vendor_id != DS_VENDOR_ID && info.product_id != DS_PRODUCT_ID
+    cur_dev = info.next
+
+    next
+  end
 
   handle = LibHIDAPI.hid_open(info.vendor_id, info.product_id, info.serial_number)
 

@@ -22,7 +22,7 @@ cur_dev = devs
 while cur_dev
   info = cur_dev.value
 
-  if info.vendor_id != DS_VENDOR_ID && info.product_id != DS_PRODUCT_ID
+  unless info.vendor_id == DS_VENDOR_ID && info.product_id == DS_PRODUCT_ID
     cur_dev = info.next
 
     next

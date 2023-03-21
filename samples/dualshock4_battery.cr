@@ -43,7 +43,6 @@ while cur_dev
 
   status = buf[32]
   battery_data = status & DS4_STATUS0_BATTERY_CAPACITY
-  p! battery_data
 
   # Interpretation of the battery_capacity data depends on the cable state.
   # When no cable is connected (bit4 is 0):

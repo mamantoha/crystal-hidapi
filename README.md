@@ -36,10 +36,10 @@ require "crystal-hidapi"
 crystal ./lib/crystal_lib/src/main.cr src/hidapi/lib_hidapi.cr.in > src/hidapi/lib_hidapi.cr
 ```
 
-https://github.com/libusb/hidapi
-https://github.com/libusb/hidapi/blob/master/hidapi/hidapi.h
-https://github.com/libusb/hidapi/blob/master/hidtest/test.c
-https://github.com/todbot/hidapitester/blob/master/hidapitester.c
+- https://github.com/libusb/hidapi
+- https://github.com/libusb/hidapi/blob/master/hidapi/hidapi.h
+- https://github.com/libusb/hidapi/blob/master/hidtest/test.c
+- https://github.com/todbot/hidapitester/blob/master/hidapitester.c
 
 ## Contributing
 

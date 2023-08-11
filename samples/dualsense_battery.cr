@@ -1,6 +1,6 @@
 require "../src/hidapi/lib_hidapi"
 
-# Get the Sony PlayStation 5 DualSense controller battery level
+# Retrieve battery level for Sony PlayStation 5 DualSense controller
 # Tested on Linux
 
 # https://github.com/torvalds/linux/blob/master/drivers/hid/hid-playstation.c

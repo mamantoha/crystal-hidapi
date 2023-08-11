@@ -1,6 +1,6 @@
 require "../src/hidapi/lib_hidapi"
 
-# Get Sony DualShock4 (2nd gen) controller battery capacity and status.
+# Fetch battery capacity and status for Sony DualShock4 (2nd gen) controller.
 # Tested on Linux.
 
 # https://github.com/torvalds/linux/blob/master/drivers/hid/hid-playstation.c

@@ -30,16 +30,25 @@ You need to install the development package for `hidapi`
 require "crystal-hidapi"
 ```
 
+### Sample Usage
+
+Explore the following examples:
+
+- [Retrieve battery level for Sony PlayStation 5 DualSense controller](samples/dualsense_battery.cr)
+- [Fetch battery capacity and status for Sony DualShock4 (2nd gen) controller](samples/dualshock4_battery.cr)
+
 ## Development
 
 ```
 crystal ./lib/crystal_lib/src/main.cr src/hidapi/lib_hidapi.cr.in > src/hidapi/lib_hidapi.cr
 ```
 
-- https://github.com/libusb/hidapi
-- https://github.com/libusb/hidapi/blob/master/hidapi/hidapi.h
-- https://github.com/libusb/hidapi/blob/master/hidtest/test.c
-- https://github.com/todbot/hidapitester/blob/master/hidapitester.c
+## External Resources Usage
+
+- [libusb's hidapi on GitHub](https://github.com/libusb/hidapi)
+- [hidapi header file](https://github.com/libusb/hidapi/blob/master/hidapi/hidapi.h)
+- [hidapi test code](https://github.com/libusb/hidapi/blob/master/hidtest/test.c)
+- [hidapitester code by todbot](https://github.com/todbot/hidapitester/blob/master/hidapitester.c)
 
 ## Contributing
 

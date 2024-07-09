@@ -21,10 +21,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Install libhidapi
+        run: sudo apt-get install -y libhidapi-dev
       - name: Install Crystal
         uses: crystal-lang/install-crystal@v1
-        with:
-          crystal: latest
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Install dependencies

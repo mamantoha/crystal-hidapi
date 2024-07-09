@@ -1,9 +1,8 @@
 require "./spec_helper"
 
 describe HIDAPI do
-  # TODO: Write tests
-
-  it "works" do
-    false.should eq(true)
+  it "#version" do
+    hidapi = HIDAPI.new
+    hidapi.version.should match(/\d+\.\d+\.\d+/)
   end
 end

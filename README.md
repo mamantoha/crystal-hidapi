@@ -1,5 +1,7 @@
 # crystal-hidapi
 
+[![Crystal CI](https://github.com/mamantoha/crystal-hidapi/actions/workflows/crystal.yml/badge.svg)](https://github.com/mamantoha/crystal-hidapi/actions/workflows/crystal.yml)
+
 A Crystal interface to [HIDAPI](https://github.com/libusb/hidapi) library.
 
 It works on Linux and macOS.
